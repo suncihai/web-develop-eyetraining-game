@@ -1,0 +1,89 @@
+#eyetraining_board{
+	width:1400px;
+	height:788px;
+	background-color:green;
+	border-radius:8px;
+	border:2px solid gray;
+	position:relative;
+}
+
+#eyetraining_gif{
+	width:1400px;
+	height:788px;
+}
+
+#eyetraining_gif:hover{
+    cursor:pointer;
+}
+
+#card_zone{
+	width:1400px;
+	height:650px;
+	position: relative;
+}
+
+.movingcards{
+	width:150px;
+	height: 225px;
+	border:5px solid white;
+}
+
+#movingcard1{
+	position: absolute;
+	left:150px;
+	top:200px;
+}
+
+#movingcard2{
+	position: absolute;
+	left:400px;
+	top:200px;
+}
+
+#movingcard3{
+	position: absolute;
+	left:650px;
+	top:200px;
+}
+
+#targetcard{
+	position: absolute;
+	left:1000px;
+	top:200px;
+}
+
+#targetdes{
+	color:white;
+	font-size: 24px;
+	position: absolute;
+	left:970px;
+	top:450px;
+}
+
+#eyetraning_getcardsbtn{
+	margin-left:200px;
+}
+
+#eyetraning_readysbtn{
+	margin-left:80px;
+}
+
+#movingcardsbtn{
+	margin-left:80px;
+}
+
+#eyetrainingresetbtn{
+	margin-left:80px;
+}
+
+#quiteyetrainingbtn{
+	margin-left:80px;
+}
+
+.eyetrainingresult{
+	color:white;
+	font-size:24px;
+	position: absolute;
+	left:600px;
+	bottom:200px;
+}

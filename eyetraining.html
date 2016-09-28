@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/eyetraining.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
+    <script type="text/javascript" src="scripts/eyetraining.js"></script>
+	<title>eyetraining</title>
+</head>
+
+<body ng-controller="myCtrl">
+    <div id="eyetraining_gif" ng-show="eyetrainingswitch1"><img src="images/eyetraining.gif" ng-click="switcheyetraining(false)"/> 
+    </div>
+
+    <div id="eyetraining_board" ng-show="eyetrainingswitch2">
+        <div id="card_zone">
+            <div id="movingcard1" class="movingcards" ng-click="choosecard1()">
+                <img src={{eyetrainingcard1.src}} style="width:100%"/>     
+            </div>
+            <div id="movingcard2" class="movingcards" ng-click="choosecard2()">
+                <img src={{eyetrainingcard2.src}} style="width:100%"/>     
+            </div>
+            <div id="movingcard3" class="movingcards" ng-click="choosecard3()">
+                <img src={{eyetrainingcard3.src}} style="width:100%"/>     
+            </div>
+            <div id="targetcard" class="movingcards">
+                <img src={{eyetrainingtargetcard.src}} style="width:100%"/>  
+            </div>
+            <div id="targetdes">Remember this card</div>  
+        </div>
+        <div class="eyetrainingresult" ng-show="getrightcard">You are so strong</div>
+        <div class="eyetrainingresult" ng-show="getwrongcard">Wrong Card</div>
+        <div id="control_zone">
+            <button id="eyetraning_getcardsbtn" class="btn btn-info" ng-click="eyetraining_getcards()">Get Cards</button>
+            <button id="eyetraning_readysbtn" class="btn btn-warning" ng-click="eyetraining_ready()">Ready</button>
+            <button id="movingcardsbtn" class="btn btn-danger" ng-click="movingcards()">Move Cards</button>
+            <button id="eyetrainingresetbtn" class="btn btn-info" ng-click="eyetrainingreset()">Reset</button>
+            <button id="quiteyetrainingbtn" class="btn btn-success" ng-click="switcheyetraining(true)">Quit Game</button>
+        </div>
+    </div>
+</body>
+</html>
